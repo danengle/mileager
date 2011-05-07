@@ -1,12 +1,27 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <title>Rails3MongoidDevise</title>
+  <meta charset="utf-8"/>
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mileager App</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <%= stylesheet_link_tag :all %>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
   <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'modernizr-1.7.min.js' %>
+  
   <%= csrf_meta_tag %>
 </head>
-<body>
+<body lang="us">
+  <div id="container">
   <ul class="hmenu">
     <%= render 'devise/menu/registration_items' %>
     <%= render 'devise/menu/login_items' %>
@@ -16,6 +31,6 @@
   <%- end -%>
 
 <%= yield %>
-
+  </div>
 </body>
 </html>
