@@ -1,7 +1,5 @@
-class Maintenance
-  include Mongoid::Document
-  field :cost, type: Float
-  field :summary, type: String
+class Maintenance < Activity
   
-  embedded_in :user
+  field :summary, type: String
+
 end

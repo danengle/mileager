@@ -1,10 +1,12 @@
-class FuelUp
-  include Mongoid::Document
+class FuelUp < Activity
   
   field :odometer, type: Float
   field :gallons, type: Float
   field :price_per_gallon, type: Float
-  field :cost, type: Float
   
-  embedded_in :user
+  before_create :calculations
+  
+  def calculations
+    # self.total_mileage = 
+  end
 end
