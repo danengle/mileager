@@ -43,5 +43,8 @@ module Rails3MongoidDevise
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password, :password_confirmation]
+    
+    config.mongoid.logger = Logger.new($stdout, :warn)
+    config.mongoid.persist_in_safe_mode = true
   end
 end
