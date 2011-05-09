@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Trip:</b>
+  <%= @fuel_up.trip %>
+</p>
+
+<p>
+  <b>Volume:</b>
+  <%= @fuel_up.volume %>
+</p>
+
+<p>
+  <b>Cost per unit:</b>
+  <%= @fuel_up.cost_per_unit %>
+</p>
+
+
+<%= link_to 'Edit', edit_fuel_up_path(@fuel_up) %> |
+<%= link_to 'Back', fuel_ups_path %>

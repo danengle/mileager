@@ -17,5 +17,15 @@ class User
   
   references_and_referenced_in_many :vehicles
   references_many :activities
+  has_one :default_vehicle, :class => 'Vehicle', :foreign_key => :default_vehicle_id
+  has_one :creator, :class => 'User', :foreign_key => :creator_id
+  
+  def my_vehicle
+    vehicles.create(
+      :name => 'My Car'
+    ) if vehicles.blank?
+    default_vehicle
+  end
+
 end
 

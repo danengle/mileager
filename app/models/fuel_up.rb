@@ -1,8 +1,8 @@
 class FuelUp < Activity
   
-  field :odometer, type: Float
-  field :gallons, type: Float
-  field :price_per_gallon, type: Float
+  field :trip, type: Float
+  field :volume, type: Float
+  field :cost_per_unit, type: Float
   
   before_create :calculations
   

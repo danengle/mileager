@@ -4,7 +4,7 @@ class Activity
   include Mongoid::Paranoia
   
   field :cost, type: Float
-  field :total_mileage, type: Integer
+  field :odometer, type: Integer
   
   belongs_to :vehicle
   belongs_to :user

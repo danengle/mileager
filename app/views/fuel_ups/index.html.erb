@@ -1,0 +1,27 @@
+<h1>Listing fuel_ups</h1>
+
+<table>
+  <tr>
+    <th>Trip</th>
+    <th>Volume</th>
+    <th>Cost per unit</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fuel_ups.each do |fuel_up| %>
+  <tr>
+    <td><%= fuel_up.trip %></td>
+    <td><%= fuel_up.volume %></td>
+    <td><%= fuel_up.cost_per_unit %></td>
+    <td><%= link_to 'Show', fuel_up %></td>
+    <td><%= link_to 'Edit', edit_fuel_up_path(fuel_up) %></td>
+    <td><%= link_to 'Destroy', fuel_up, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fuel up', new_fuel_up_path %>
